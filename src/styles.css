@@ -1,0 +1,330 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+h1 {
+  font-size: 1.2rem;
+}
+
+.topp {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.App {
+  height: 100vh;
+  width: 100vw;
+  background-color: white;
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: center;
+}
+
+.friend-list {
+  min-height: 26rem;
+  min-width: 30rem;
+  max-height: 40rem;
+  background-color: whitesmoke;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-right: 1rem;
+  overflow-y: hidden;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  overflow-y: visible;
+}
+
+.title {
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  /* letter-spacing: 1.5px; */
+}
+
+.calculator {
+  min-height: 26rem;
+  min-width: 28rem;
+  background-color: rgba(255, 0, 72, 0.429);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+
+.title {
+  flex: 0.1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  flex: 0.9;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: space-evenly;
+}
+
+.add-friend {
+  position: absolute;
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  min-height: 13rem;
+  width: 20rem;
+  padding: 1rem;
+  border-radius: 0.3rem;
+}
+
+.add-friend .bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.green {
+  color: rgb(0, 144, 2);
+}
+
+.red {
+  color: rgba(203, 0, 0, 0.792);
+}
+
+.bottom {
+  flex: 0.2;
+}
+
+.add-friend .bottom .btnn {
+  height: 2rem;
+}
+
+.btn {
+  background-color: lawngreen;
+  border: none;
+  outline: none;
+  padding: 1.5rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+}
+
+.btn:hover {
+  background-color: rgb(117, 222, 12);
+}
+
+.btn:active {
+  scale: 95%;
+}
+
+.form-group,
+.user-input {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 3rem;
+  /* background-color: red; */
+  border-radius: 0.3rem;
+  border: 0.11rem solid whitesmoke;
+}
+
+label {
+  padding: 1rem;
+  flex: 0.5;
+}
+
+input,
+select {
+  flex: 0.5;
+  height: 100%;
+  /* width: 100%; */
+  text-align: center;
+  outline: inherit;
+  border: none;
+}
+
+.friend {
+  display: flex;
+  background-color: rgba(255, 0, 72, 0.429);
+  align-items: center;
+  min-height: 5rem;
+  border-radius: 0.5rem;
+  box-shadow: inset 0px 0px 1px rgba(0, 0, 0, 0.464);
+  cursor: pointer;
+  transition: all 0.15s ease-in;
+}
+
+.friend:hover {
+  background-color: rgb(255, 102, 127);
+}
+
+.friend .left {
+  flex: 0.3;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: red; */
+  background-color: rgba(255, 0, 72, 0);
+}
+
+.left img {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 0.11rem solid black;
+}
+
+.friend .right {
+  /* padding: 1rem; */
+  flex: 0.4;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.friend .last {
+  flex: 0.3;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 0.1rem;
+}
+
+.close {
+  padding: 0.4rem;
+  outline: none;
+  border: none;
+  background-color: red;
+  margin-left: 0.4rem;
+  border-radius: 50%;
+  height: 1.6rem;
+  width: 1.6rem;
+  cursor: pointer;
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.683);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.close:hover {
+  background-color: rgb(212, 0, 0);
+}
+
+.friend .btn {
+  height: 1.5rem;
+  width: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0;
+  padding: 1rem;
+  background: yellow;
+}
+
+.selected {
+  background-color: rgb(255, 102, 127);
+}
+
+.calc,
+.calculator {
+  transition: 0.2s ease-in-out;
+}
+
+@media screen and (max-width: 480px) {
+  .App {
+    display: flex;
+    flex-direction: column;
+    overflow-y: visible;
+    gap: 2rem;
+    padding: 1rem;
+    font-size: 1rem;
+  }
+
+  .friend-list {
+    min-height: 18rem;
+    min-width: 18rem;
+    max-height: 20rem;
+    padding: 0.5rem;
+  }
+
+  .emoji {
+    display: none;
+  }
+
+  .btn .btnnn {
+    padding: 0.2rem;
+    font-size: 0.8rem;
+    height: 1rem;
+    width: fit-content;
+  }
+
+  .friend {
+    display: flex;
+    padding: 0.5rem;
+  }
+
+  .friend .left {
+    flex: 0.2;
+    margin-right: 0.3rem;
+  }
+
+  .friend .right {
+    flex: 0.5;
+  }
+
+  .close {
+    height: 1rem;
+    width: 1rem;
+  }
+
+  .friend .last {
+    flex: 0.3;
+  }
+
+  .name2 {
+    text-align: center;
+  }
+
+  label {
+    padding: 1rem;
+  }
+
+  .calculator {
+    margin: 1rem;
+    min-height: 28rem;
+    max-height: 28rem;
+    max-width: 20rem;
+    min-width: 16rem;
+    background-color: rgba(255, 0, 72, 0.429);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+      rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+    font-size: 1rem;
+  }
+}

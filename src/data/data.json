@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "Praveen",
+    "img": "https://picsum.photos/200",
+    "balance": -20
+  },
+  {
+    "id": 2,
+    "name": "Krishnalakshmi",
+    "img": "https://picsum.photos/200",
+    "balance": 0
+  },
+  {
+    "id": 3,
+    "name": "Hariraman",
+    "img": "https://picsum.photos/200",
+    "balance": 20
+  }
+]
